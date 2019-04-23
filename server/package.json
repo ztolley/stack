@@ -1,0 +1,18 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-express": "^2.4.8",
+    "express": "^4.16.4",
+    "graphql": "^14.2.1",
+    "knex": "^0.16.5",
+    "pg": "^7.10.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "dotenv": "^7.0.0",
+    "nodemon": "^1.18.11"
+  }
+}
