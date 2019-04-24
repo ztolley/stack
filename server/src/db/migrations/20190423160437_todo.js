@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 exports.up = function(knex) {
   return knex.schema.createTable('todo', todo => {
     todo
@@ -11,6 +9,6 @@ exports.up = function(knex) {
   })
 }
 
-exports.down = function(knex, Promise) {
-  return Promise.all([knex.schema.dropTable('todo')])
+exports.down = function(knex) {
+  return knex.schema.dropTable('todo')
 }
