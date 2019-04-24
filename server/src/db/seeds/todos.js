@@ -6,6 +6,8 @@ async function clear(knex) {
 }
 
 async function seed(knex) {
+  await clear(knex)
+
   await knex('todo').insert({
     id: uuid(),
     title: 'Test action one',

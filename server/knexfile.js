@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   client: 'pg',
-  connection: process.env.FUEL_DATABASE_URL || {
+  connection: process.env.DATABASE_URL || {
     host: '127.0.0.1',
     port: '54320',
     user: 'stack',
