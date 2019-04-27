@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { useTodoListQuery } from '../../graphql'
 
 const Home = (): JSX.Element => {
@@ -10,14 +10,14 @@ const Home = (): JSX.Element => {
   const { todos } = data
 
   return (
-    <Fragment>
+    <div className="container">
       <h1>Todos</h1>
       <ul>
         {todos.map(({ title, id }) => (
           <li key={id}>{title}</li>
         ))}
       </ul>
-    </Fragment>
+    </div>
   )
 }
 
