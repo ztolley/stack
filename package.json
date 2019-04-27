@@ -7,5 +7,22 @@
   "workspaces": [
     "client",
     "server"
-  ]
+  ],
+  "dependencies": {
+    "@graphql-codegen/add": "^1.1.1",
+    "@graphql-codegen/cli": "^1.1.1",
+    "@graphql-codegen/typescript": "1.1.1",
+    "@graphql-codegen/typescript-operations": "1.1.1",
+    "@graphql-codegen/typescript-react-apollo": "1.1.1",
+    "concurrently": "^4.1.0",
+    "graphql": "^14.2.1",
+    "graphql-tag": "^2.10.1"
+  },
+  "scripts": {
+    "server": "yarn --cwd server dev",
+    "client": "yarn --cwd client start",
+    "dev": "concurrently \"yarn server\" \"yarn client\" \"yarn codegen:watch\"",
+    "codegen": "gql-gen --config codegen.yml",
+    "codegen:watch": "gql-gen --config codegen.yml --watch"
+  }
 }
