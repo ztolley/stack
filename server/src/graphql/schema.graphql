@@ -22,6 +22,11 @@ type Query {
 type Mutation {
   addProject(title: String!): Project!
   updateProject(id: ID!, title: String!): Project!
-  addTodo(title: String!): Todo!
-  updateTodo(id: ID!, title: String!, complete: Boolean!): Todo!
+  addTodo(title: String!, projectId: String): Todo!
+  updateTodo(
+    id: ID!
+    title: String!
+    projectId: String
+    complete: Boolean!
+  ): Todo!
 }
