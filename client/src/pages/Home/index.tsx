@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 import { useTodoListQuery } from '../../graphql'
 
 const Home = (): JSX.Element => {
@@ -14,7 +16,9 @@ const Home = (): JSX.Element => {
       <h1>Todos</h1>
       <ul>
         {todos.map(({ title, id }) => (
-          <li key={id}>{title}</li>
+          <li key={id}>
+            <Link to={`/edit/${id}`}>{title}</Link>
+          </li>
         ))}
       </ul>
     </div>
