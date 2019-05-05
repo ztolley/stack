@@ -1,8 +1,6 @@
 import { Field, ErrorMessage } from 'formik'
 import React from 'react'
 
-import CheckboxComponent from './CheckboxComponent'
-
 interface InputProps {
   disabled?: boolean
   footnote?: string
@@ -17,7 +15,12 @@ const Checkbox = (props: InputProps): JSX.Element => {
   return (
     <div className="form-group">
       {label && <label htmlFor={name}>{label}</label>}
-      <Field component={CheckboxComponent} disabled={disabled} name={name} />
+      <Field
+        className="form-control"
+        disabled={disabled}
+        name={name}
+        type="checkbox"
+      />
       <small className="form-text text-muted">{footnote}</small>
       <ErrorMessage name={name} className="invalid-feedback" component="div" />
     </div>

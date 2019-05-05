@@ -13,7 +13,6 @@ export interface SelectProps {
   label?: string
   name: string
   options: Option[]
-  subLabel?: string
 }
 
 const Select = (props: SelectProps): JSX.Element => {

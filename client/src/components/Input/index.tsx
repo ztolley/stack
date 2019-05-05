@@ -18,11 +18,11 @@ const Input = (props: InputProps): JSX.Element => {
       <Field
         className="form-control"
         disabled={disabled}
-        type={type}
         name={name}
+        type={type}
       />
       <small className="form-text text-muted">{footnote}</small>
-      <ErrorMessage name={name} className="invalid-feedback" component="div" />
+      <ErrorMessage className="invalid-feedback" component="div" name={name} />
     </div>
   )
 }

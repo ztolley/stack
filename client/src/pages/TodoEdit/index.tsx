@@ -1,4 +1,5 @@
 import React from 'react'
+import { RouteComponentProps } from 'react-router-dom'
 
 import {
   Todo,
@@ -8,18 +9,11 @@ import {
 } from '../../graphql'
 import TodoForm from '../../forms/Todo'
 
-interface TodoEditProps {
-  history: {
-    push: (url: string) => void
-  }
-  match: {
-    params: {
-      id: string
-    }
-  }
+interface TodoParams {
+  id: string
 }
 
-const TodoEdit = (props: TodoEditProps): JSX.Element => {
+const TodoEdit = (props: RouteComponentProps<TodoParams>): JSX.Element => {
   const {
     history,
     match: {

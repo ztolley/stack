@@ -4,11 +4,7 @@ import React from 'react'
 import { Checkbox, Input, Select } from '../../components'
 import { Option } from '../../components/Select'
 
-import {
-  Project,
-  Todo,
-  useProjectListQuery,
-} from '../../graphql'
+import { Project, Todo, useProjectListQuery } from '../../graphql'
 
 interface TodoFormProps {
   todo: Todo
@@ -29,13 +25,11 @@ const TodoForm = (props: TodoFormProps): JSX.Element => {
   if (error) return <p>Error: {error.message}</p>
   const projectOptions = data.projects.map(projectToOption)
 
-
-
   return (
     <Formik initialValues={todo} onSubmit={onSubmit}>
       <Form>
         <Input type="text" name="title" label="Title" />
-        <Select name="project.id" options={projectOptions} />
+        <Select name="project.id" label="Project" options={projectOptions} />
         <Checkbox name="complete" label="Complete?" />
         <hr />
         <button className="btn" type="button" onClick={onCancel}>
