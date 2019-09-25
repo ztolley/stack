@@ -2,6 +2,8 @@
 
 Simple to use stack to allow development with Node, React and GraphQL
 
+https://link.medium.com/A9x3Gsjnh0
+
 
 ### Prerequisites
 * `psql`
